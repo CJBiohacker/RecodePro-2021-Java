@@ -1,7 +1,5 @@
 package DesafiosGuanabara;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -15,25 +13,29 @@ class exercicio_32 {
         Scanner entrada = new Scanner(System.in);
         PrintStream saida = System.out;
 
-        int escolhaPC, escolhaUser;
+        int escolhaPC, escolhaUser, tentativas;
 
         saida.println("Bem vindo ao jogo de adivinhação de números");
-        saida.println("Eu, o computador, irei sortear um nº de 1 à 5 e você terá de advinhar.");
+        saida.println("Eu, o computador, irei sortear um nº de 1 à 5 e você terá que advinhar.");
         escolhaPC = toIntExact(Math.round(Math.random() * 5));
-        saida.println("Estou sorteando.... PRONTO !!!" + escolhaPC + " Advinhe o nº, mero mortal... MWAHAHAHHA ");
-        saida.print("Nº = ");
+        saida.println("Estou sorteando.... PRONTO !!! " + escolhaPC + " Advinhe o nº, mero mortal... MWAHAHAHHA ");
+        tentativas = 1;
+        saida.print("Tentativa " + tentativas + " = ");
         escolhaUser = entrada.nextInt();
 
         if ( escolhaUser == escolhaPC ) {
-            saida.println("Parabéns, você acertou o número");
+            saida.print("Parabéns !!!");
         } else {
             while ( escolhaUser != escolhaPC ) {
+                tentativas++;
                 saida.println("Número errado, tente outra vez");
-                saida.print("Nº = ");
+                saida.print("Tentativa " + tentativas + " = ");
                 escolhaUser = entrada.nextInt();
             }
-            saida.println("Parabéns, você acertou o número");
         }
-
+        String vitoria = (tentativas == 1) ?
+                "Você acertou na 1ª tentativa" :
+                "Você acertou com " + tentativas + " tentativas.";
+        saida.println(vitoria);
     }
 }
