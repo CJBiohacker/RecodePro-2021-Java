@@ -19,9 +19,15 @@ class exercicioAula3_3 {
         num = entrada.nextInt();
         System.out.println("Número " + num + " selecionado. Calculando...");
 
-        for ( int i = 0 ; i <= 9; i++ ) {
+        while (num < 1) {
+            System.out.println("Este número não é permitido. Selecione um número maior do que 0:");
+            num = entrada.nextInt();
+            System.out.println("Número " + num + " selecionado. Calculando...");
+        }
+
+        for (int i = 1; i <= 9; i++) {
             tabuada[i] = num * j;
-            System.out.println(num + " x " + i + " = " + j );
+            System.out.println(num + " x " + i + " = " + j);
             j++;
         }
 
