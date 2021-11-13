@@ -20,27 +20,27 @@ class CodigoCadastro {
             switch (i) {
                 case 0:
                     saida.print("Nome: \n");
-                    usuario.setNome(entrada.next());
+                    usuario.setNome(entrada.nextLine());
                     dadosUser[i] = usuario.getNome();
                     break;
                 case 1:
                     saida.print("Sobrenome: " + "\n");
-                    usuario.setSobrenome(entrada.next());
+                    usuario.setSobrenome(entrada.nextLine());
                     dadosUser[i] = usuario.getSobrenome();
                     break;
                 case 2:
                     saida.print("CPF: \n");
-                    usuario.setCPF(entrada.next());
+                    usuario.setCPF(entrada.nextLine());
                     dadosUser[i] = usuario.getCPF();
                     break;
                 case 3:
                     saida.print("Telefone: \n");
-                    usuario.setTel(entrada.next());
+                    usuario.setTel(entrada.nextLine());
                     dadosUser[i] = usuario.getTel();
                     break;
                 case 4:
                     saida.print("Endereço: \n");
-                    usuario.setEnd(entrada.next());
+                    usuario.setEnd(entrada.nextLine());
                     dadosUser[i] = usuario.getEnd();
                     break;
                 default:
@@ -54,6 +54,7 @@ class CodigoCadastro {
 
         String[] destinos = {"Rio de Janeiro", "Espírito Santo", "São Paulo", "Minas Gerais"};
         String[] horarios = {"7h00", "12h00", "19h00", "00h00"};
+
         int j = 0;
         var codDest = 0;
         var codHor = 0;

@@ -12,7 +12,5 @@ class primeiroPrograma {
 
         Scanner entrada = new Scanner(System.in);
 
-
-
     }
 }
