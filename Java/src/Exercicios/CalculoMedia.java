@@ -28,7 +28,6 @@ class CalculoMedia {
                     : "Você está de recuperação, boa sorte.";
             System.out.println(condMedia);
         }
-
         entrada.close();
     }
 }
